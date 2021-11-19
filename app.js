@@ -18,7 +18,7 @@
 // );
 
 const app = () => {
-  alert("aaa");
+  console.log("bbb");
 };
 
 module.exports = app;
