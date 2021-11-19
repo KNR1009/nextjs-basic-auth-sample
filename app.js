@@ -5,17 +5,16 @@ const USER_NAME = "user";
 const PASSWORD = "password";
 
 const app = protect(
-  console.log(app.js)
-  // "/",
-  // (username, password) => {
-  //   return safeCompare(username, USER_NAME) && safeCompare(password, PASSWORD);
-  // },
-  // {
-  //   directory: `${__dirname}/public`,
-  //   onAuthFailed: (res) => {
-  //     res.end("Authentication failed.");
-  //   },
-  // }
+  "/",
+  (username, password) => {
+    return safeCompare(username, USER_NAME) && safeCompare(password, PASSWORD);
+  },
+  {
+    directory: `${__dirname}/public`,
+    onAuthFailed: (res) => {
+      res.end("Authentication failed.");
+    },
+  }
 );
 
 module.exports = app;
